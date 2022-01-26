@@ -1,6 +1,10 @@
 import tweepy
 from datetime import datetime
 
+
+# created by Jack Matthews/ @makozort
+# feel free to use the code anywhere but please credit me
+
 mylines = []                            
 with open (f".\keys.txt", 'rt') as f: # here we read in our secret keys into an array
     for myline in f:                
@@ -40,4 +44,5 @@ client.create_tweet(text=text) # send the tweet!
 
 
 
-
+# created by Jack Matthews/ @makozort
+# feel free to use the code anywhere but please credit me
