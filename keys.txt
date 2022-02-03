@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 consumerkey = secretkey
 consumersecret = secretkey
 Accesstoken = secretkey
 Accesssecret = secretkey
+=======
+consumerkey = examplekey
+consumersecret = examplekey
+Accesstoken = examplekey
+Accesssecret = examplekey
+>>>>>>> 9902ed1c335645674bad847eea58840b47208812
