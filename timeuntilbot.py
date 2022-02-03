@@ -34,7 +34,7 @@ i = str(dlcdate - today) # get the time between now release of dlc
 if "day" in i:    # look, it was 5am and this solved 2 problems I had
     difference = (int(i.split(" ")[0]) + 1) # and add 1 to it because it does not count the date its trying to reach as a full day
 else:
-    text = ("1 day until")
+    text = ("1 day until" + dlcname)
     client.create_tweet(text=text) # python is weird how it does datetime imo, or maybe im just dumb. either way the workaround to some issue.. well, works.
     exit()
 
