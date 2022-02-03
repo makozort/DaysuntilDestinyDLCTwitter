@@ -1,1 +1,0 @@
-python.exe "C:\Users\jackr\dev\destinydaysuntil\timeuntilbot.py" pause
