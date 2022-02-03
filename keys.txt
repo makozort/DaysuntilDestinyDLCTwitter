@@ -1,4 +1,4 @@
-consumerkey = QqK0mC6RGWsT5DR79cTvumf8O
-consumersecret = gZSCcl1EAFbYivwbk87FHuwZtjffh2UV5O9QC64dXySGo8OfPD
-Accesstoken = 1485961042245357579-7Td0zgJgIM5zuV03jjz4NCxFq7JvTD
-Accesssecret = qBpqVwHF1NxYu5lusTjk1hpz04UujJXcjPoTQ6rLAIvBx
+consumerkey = secretkey
+consumersecret = secretkey
+Accesstoken = secretkey
+Accesssecret = secretkey

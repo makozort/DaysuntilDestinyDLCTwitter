@@ -1,3 +1,4 @@
+from operator import contains
 import tweepy
 from datetime import datetime
 
@@ -25,22 +26,28 @@ client = tweepy.Client(
     access_token_secret=accesssecret
 )
 
-from datetime import datetime
+today = datetime.today()
+dlcdate = datetime(day=22, month=2, year=2022)
+dlcname = " The Witch Queen"
 
-today = datetime.now()
-dlcdate = datetime(day=23, month=2, year=2022, hour=20) 
-
-
-difference = str(dlcdate - today) # get the time between now release of dlc
-
-
-if (difference.split(", ")[0]) == ("-1 day"): # probably ineffecient way to check if it is the day of a dlc release, but it works
-    text = ("The Witch Queen is out!")
+i = str(dlcdate - today) # get the time between now release of dlc
+if "day" in i:    # look, it was 5am and this solved 2 problems I had
+    difference = (int(i.split(" ")[0]) + 1) # and add 1 to it because it does not count the date its trying to reach as a full day
 else:
-    text = (difference.split(", ")[0] + " until The Witch Queen")
+    text = ("1 day until")
+    client.create_tweet(text=text) # python is weird how it does datetime imo, or maybe im just dumb. either way the workaround to some issue.. well, works.
+    exit()
 
+
+if difference == 0: #if the dlc is out
+    text = (dlcname + " is out!")
+elif difference < 0: # don't send a tweet if the dlc is already out
+    print("dlc already out") 
+    exit()
+else:
+    text = (str(difference) + " days until" + dlcname)
+    
 client.create_tweet(text=text) # send the tweet!
- 
 
 
 
