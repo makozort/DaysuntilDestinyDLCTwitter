@@ -1,4 +1,0 @@
-consumerkey = secretkey
-consumersecret = secretkey
-Accesstoken = secretkey
-Accesssecret = secretkey
