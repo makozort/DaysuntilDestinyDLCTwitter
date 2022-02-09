@@ -1,23 +1,22 @@
 from operator import contains
 import tweepy
 from datetime import datetime
-
+import json
 
 # created by Jack Matthews/ @makozort
 # feel free to use the code anywhere but please credit me
 
-mylines = []                            
-with open (f".\keys.txt", 'rt') as f: # here we read in our secret keys into an array
-    for myline in f:                
-        mylines.append(myline)
-    x = (mylines[0].split("= "))                   
-    consumerkey = (x[1].rstrip("\n"))
-    x = (mylines[1].split("= "))
-    consumersecret = (x[1].rstrip("\n"))
-    x = (mylines[2].split("= "))
-    accesstoken = (x[1].rstrip("\n"))
-    x = (mylines[3].split("= "))            # split and sort our keys into variables 
-    accesssecret = (x[1].rstrip("\n"))
+
+
+with open(f"./keys.json", 'r') as f:
+  data = json.load(f)                   # read in a jso
+  consumerkey = (data["consumerkey"])
+  consumersecret = (data["consumersecret"])
+  accesstoken = (data["access_token"])
+  accesssecret = (data["accesssecret"])
+
+
+
     
 client = tweepy.Client( 
     consumer_key=consumerkey,
