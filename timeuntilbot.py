@@ -1,4 +1,3 @@
-from operator import contains
 import tweepy
 from datetime import datetime
 import json
@@ -37,10 +36,10 @@ if today.date() == dlcdate.date():
 
 i = str(dlcdate - today) # get the time between now release of dlc
 if "day" in i:    # look, it was 5am and this solved 2 problems I had
-    difference = (int(i.split(" ")[0]))
+    difference = (int(i.split(" ")[0])) # add 1 to the difference as datetime does not add the actual day of the dlc (we want that)
 else:
     text = ("1 reset until" + dlcname)
-    client.create_tweet(text=text) # python is weird how it does datetime imo, or maybe im just dumb. either way the workaround to some issue.. well, works.
+    client.create_tweet(text=text) 
     exit()
 
 if difference < 0: # don't send a tweet if the dlc is already out
